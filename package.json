@@ -1,0 +1,25 @@
+{
+  "name": "namaskarnodejs",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/shrey106/namaskarNodeJs#readme",
+  "bugs": {
+    "url": "https://github.com/shrey106/namaskarNodeJs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrey106/namaskarNodeJs.git"
+  },
+  "license": "ISC",
+  "author": "Shrey Koirala",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
