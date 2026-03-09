@@ -1,24 +1,25 @@
-const express = require ('express')
-const app = express ()
 
+const express = require('express')
+const app = express ()
 app.set ('view engine','ejs')
 
 
-
-
-
-app.get('/', (req,res)=>{
-    const name = "Shrey koirala"
-    const address = "Biratnagar"
-   res.render ('home.ejs',{data:name , address:address})
-})
- 
-app.get('/about',(req,res)=>{
-    res.render ('about.ejs')
+app.get ('/',(req,res)=>{
+    res.render ('home')
 })
 
+app.get ('/register',(req,res)=>{
+    res.render ('auth/register')
+})
 
-app.listen (3000 , ()=>{
-    console.log ( " The project has started at port 3000")
+app.get ('/login',(req,res)=>{
+   res.render ('auth/login')
+})
+
+app.use (express.static ('public/css/'))
+
+const PORT = 3000
+app.listen (PORT,()=>{
+    console.log (`Project started at port ${PORT}`)
 })
 
