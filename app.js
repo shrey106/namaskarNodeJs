@@ -1,12 +1,15 @@
 
 const express = require('express')
 const app = express ()
-app.set ('view engine','ejs')
 
+//  index.js ko entry gareko hai 
+require("./model/index")
+
+app.set ('view engine','ejs')
 
 app.get ('/',(req,res)=>{
     res.render ('home')
-})
+}) 
 
 app.get ('/register',(req,res)=>{
     res.render ('auth/register')
